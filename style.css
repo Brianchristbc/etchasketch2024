@@ -29,6 +29,7 @@ li {
   list-style-type: none;
 }
 
-.painted {
-  background-color: brown;
+.slideContainer {
+  display: flex;
+  gap: 1rem;
 }

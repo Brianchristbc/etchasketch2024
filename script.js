@@ -1,9 +1,16 @@
 let canvas = document.querySelector(".canvas");
-let spsSelector = document.getElementById("sps");
+
+let slider = document.getElementById("myRange");
+let sliderOutput = document.querySelector(".sliderOutput");
+sliderOutput.innerHTML = slider.value;
+slider.oninput = function () {
+  console.log(this.value);
+  sliderOutput.innerText = this.value;
+};
 
 window.addEventListener("load", () => {
   canvas.innerHTML = "";
-  squaresPerSide = 40;
+  squaresPerSide = slider.value;
   canvas.style.display = "flex";
   canvas.style.flexWrap = "wrap";
   canvas.style.width = Number(squaresPerSide * 10) + "px";
@@ -26,9 +33,9 @@ window.addEventListener("load", () => {
   });
 });
 
-spsSelector.addEventListener("change", () => {
+slider.addEventListener("change", () => {
   canvas.innerHTML = "";
-  squaresPerSide = Number(spsSelector.value);
+  squaresPerSide = Number(slider.value);
   canvas.style.display = "flex";
   canvas.style.flexWrap = "wrap";
   canvas.style.width = Number(squaresPerSide * 10) + "px";
