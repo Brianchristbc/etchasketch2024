@@ -17,6 +17,13 @@ window.addEventListener("load", () => {
     canvasSquare.style.backgroundColor = "white";
     canvas.appendChild(canvasSquare);
   }
+  let canvasSquares = document.querySelectorAll("li");
+  console.log(canvasSquares);
+  canvasSquares.forEach((square) => {
+    square.addEventListener("mouseover", (e) => {
+      e.target.style.backgroundColor = "#F08700";
+    });
+  });
 });
 
 spsSelector.addEventListener("change", () => {
@@ -35,4 +42,12 @@ spsSelector.addEventListener("change", () => {
     canvasSquare.style.backgroundColor = "white";
     canvas.appendChild(canvasSquare);
   }
+
+  let canvasSquares = document.querySelectorAll("li");
+  console.log(canvasSquares);
+  canvasSquares.forEach((square) => {
+    square.addEventListener("mouseover", (e) => {
+      e.target.style.backgroundColor = "#2000F0";
+    });
+  });
 });

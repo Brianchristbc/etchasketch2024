@@ -28,3 +28,7 @@ li {
   margin: 0;
   list-style-type: none;
 }
+
+.painted {
+  background-color: brown;
+}
