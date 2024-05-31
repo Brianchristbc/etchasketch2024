@@ -11,20 +11,29 @@
     <div class="container">
       <h1 class="title">Etch-a-sketch</h1>
       <label for="squares-per-side">Squares per side</label>
-      <div class="slideContainer">
-        <input
-          name="squares-per-side"
-          type="range"
-          min="30"
-          max="90"
-          value="50"
-          class="slider"
-          id="myRange"
-        />
-        <div class="sliderOutput"></div>
+      <div class="input-container">
+        <div class="slide-container">
+          <input
+            name="squares-per-side"
+            type="range"
+            min="30"
+            max="70"
+            value="50"
+            class="slider"
+            id="myRange"
+          />
+          <div class="slider-output"></div>
+        </div>
+        <div class="color-container">
+          <input type="color" id="myColor" value="#36827F" />
+          <button id="random">Random Color</button>
+          <button id="dark">Progressive Darkening</button>
+        </div>
       </div>
 
-      <ul class="canvas"></ul>
+      <div class="canvas-container">
+        <ul class="canvas"></ul>
+      </div>
     </div>
   </body>
 </html>
